@@ -1,0 +1,342 @@
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.home-hero {
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 24px;
+    background: rgba(79, 70, 229, 0.1);
+    border-radius: 100px;
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+    border: 1px solid rgba(79, 70, 229, 0.15);
+    letter-spacing: 0.05em;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.hero-title {
+    font-size: 5rem; /* Reduced slightly to prevent overlapping and wrapping issues */
+    font-weight: 800;
+    line-height: 1.1; /* Adjusted line height for better balance */
+    letter-spacing: -0.04em;
+    color: var(--text-main);
+    margin-bottom: 30px;
+    font-family: var(--font-heading);
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.hero-gradient-text {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.hero-subtitle {
+    font-size: 1.35rem;
+    color: var(--text-muted);
+    max-width: 800px; /* Slightly widened from 750px */
+    margin: 0 auto 45px;
+    line-height: 1.6;
+    font-weight: 500;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 30px; /* Increased for better separation */
+    justify-content: center;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.btn-hero-primary {
+    padding: 20px 50px;
+    font-size: 1.15rem;
+    border-radius: 18px;
+}
+
+.btn-hero-secondary {
+    padding: 20px 50px;
+    background: var(--bg-card);
+    color: var(--text-main);
+    border-radius: 18px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.btn-hero-secondary:hover {
+    background: var(--bg-main);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ==========================================================================
+   2. FEATURES SECTION
+   ========================================================================== */
+.home-section-header {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.home-section-header h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    width: 100%;
+}
+
+.feature-card {
+    border: 1px solid var(--border) !important;
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* ==========================================================================
+   2.5 HIGHLIGHT SECTION (AI & VIDEO)
+   ========================================================================== */
+.home-highlight-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.highlight-card {
+    padding: 60px 40px;
+    border-radius: 40px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.highlight-card.ai {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.04) 100%);
+}
+
+.highlight-card.video {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(59, 130, 246, 0.04) 100%);
+}
+
+.highlight-icon {
+    font-size: 3rem;
+    background: rgba(255, 255, 255, 0.03);
+    min-width: 80px;
+    height: 80px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight-text h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.highlight-text p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.highlight-link {
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+@media (max-width: 1100px) {
+    .home-highlight-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   3. METRICS SECTION
+   ========================================================================== */
+.metrics-section {
+    background: var(--bg-card);
+    padding: 120px 5%;
+    border-radius: 60px;
+    margin: 40px 20px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.metric-item {
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    letter-spacing: -0.05em;
+    margin-bottom: 15px;
+}
+
+.metric-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+/* ==========================================================================
+   4. CTA SECTION
+   ========================================================================== */
+.home-cta-box {
+    background: var(--primary-dark);
+    background-image: radial-gradient(circle at 100% 0%, rgba(79, 70, 229, 0.4), transparent), radial-gradient(circle at 0% 100%, rgba(14, 165, 233, 0.2), transparent);
+    border-radius: 48px;
+    padding: 100px 60px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.home-cta-box h2 {
+    font-size: 4.5rem;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.home-cta-box p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.btn-cta-light {
+    background: #fff !important;
+    background-image: none !important;
+    color: var(--primary-dark) !important;
+    padding: 24px 70px !important;
+    font-size: 1.2rem !important;
+    font-weight: 800 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3) !important;
+    display: inline-block;
+}
+
+.btn-cta-light:hover {
+    background: #f8fafc !important;
+    transform: translateY(-5px) scale(1.02) !important;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4) !important;
+}
+
+.btn-cta-light::before {
+    display: none !important;
+}
+
+/* ==========================================================================
+   5. DECORATIONS
+   ========================================================================== */
+.abstract-bg {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.15rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .metrics-section {
+        padding: 60px 5%;
+        border-radius: 30px;
+    }
+
+    .home-cta-box h2 {
+        font-size: 2.5rem;
+    }
+}

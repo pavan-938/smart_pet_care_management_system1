@@ -1,0 +1,168 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.consultation-modal {
+    background: var(--bg-card, #ffffff);
+    width: 100%;
+    max-width: 600px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.12);
+    padding: 36px 32px;
+    animation: slideUp 0.3s ease-out;
+    border: 1px solid #e5e7eb;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    position: relative;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    color: #2563eb;
+    margin: 0;
+    font-weight: 700;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #a1a1aa;
+    transition: color 0.2s;
+    position: absolute;
+    top: 24px;
+    right: 32px;
+}
+.close-btn:hover {
+    color: #2563eb;
+}
+
+.doctor-brief {
+    background: #f3f4f6;
+    padding: 18px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
+}
+
+.doctor-brief span {
+    font-size: 1rem;
+    color: #6366f1;
+    font-weight: 600;
+}
+
+.doctor-brief strong {
+    font-size: 1.2rem;
+    color: #111827;
+    font-weight: 700;
+}
+
+.consultation-form .form-group {
+    margin-bottom: 24px;
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.consultation-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #374151;
+}
+
+.consultation-form input,
+.consultation-form select,
+.consultation-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #fff;
+    color: #111827;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.consultation-form input:focus,
+.consultation-form select:focus,
+.consultation-form textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.submit-consultation-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #6366f1, #2563eb);
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 16px;
+}
+
+.submit-consultation-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.18);
+}
+
+.submit-consultation-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.error-message {
+    color: #ef4444;
+    background: #fef2f2;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    text-align: center;
+}
+.video-call-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+    background: #e0e7ff;
+    border-radius: 16px;
+    color: #6366f1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 24px;
+}

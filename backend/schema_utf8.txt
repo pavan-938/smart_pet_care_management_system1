@@ -1,0 +1,8 @@
+﻿Field	Type	Null	Key	Default	Extra
+id	bigint	NO	PRI	NULL	auto_increment
+amount	double	YES		NULL	
+razorpay_order_id	varchar(255)	YES		NULL	
+razorpay_payment_id	varchar(255)	YES		NULL	
+status	varchar(255)	YES		NULL	
+appointment_id	bigint	NO	UNI	NULL	
+order_id	bigint	YES	UNI	NULL	

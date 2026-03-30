@@ -1,0 +1,273 @@
+/* ==========================================================================
+   DOCTORS PAGE - PROFESSIONAL PREMIUM DESIGN
+   ========================================================================== */
+.container.dashboard-container {
+    padding: 40px 20px 80px;
+}
+
+/* Header Sections */
+.doctors-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.doctors-header .page-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 12px;
+}
+
+.doctors-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   DOCTORS GRID - REFINED PILLS
+   ========================================================================== */
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.doctor-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 25px 20px;
+    border-radius: 20px;
+    text-align: left;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.doctor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+
+.doctor-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-main);
+    color: var(--primary);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: var(--transition);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.doctor-card:hover .doctor-icon-wrapper {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.doctor-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.doctor-card h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.doctor-card .doctor-specialization {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.doctor-stats-bar {
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-unit {
+    text-align: center;
+}
+
+.stat-unit label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.stat-unit span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.doctor-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.doctor-action-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.doctor-action-btn:not(.primary) {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+}
+
+.doctor-action-btn:not(.primary):hover {
+    background-color: var(--bg-offset);
+}
+
+.doctor-action-btn.primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.doctor-action-btn.primary:hover {
+    opacity: 0.9;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .doctors-header .page-title {
+        font-size: 2.2rem;
+    }
+}
+.doctors-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(20px);
+}
+
+.search-wrapper {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.doctor-search-input {
+    width: 100%;
+    padding: 16px 20px 16px 54px;
+    border-radius: 100px;
+    border: 2px solid var(--border);
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.doctor-search-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    outline: none;
+}
+
+.filter-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.filter-chip {
+    padding: 10px 24px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: var(--bg-main);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-chip:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.filter-chip.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    box-shadow: 0 8px 20px -6px var(--primary);
+}
+.no-results-state {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: var(--bg-card);
+    border-radius: 32px;
+    border: 2px dashed var(--border);
+}
+
+.no-results-emoji {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.doctor-rating-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 193, 7, 0.15);
+    color: #f59e0b;
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.doctor-rating-badge span {
+    font-size: 0.9rem;
+}
+
